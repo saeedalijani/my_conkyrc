@@ -1,0 +1,38 @@
+background yes
+use_xft yes
+xftfont shrapnel:size=9
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+#own_window_argb_visual yes
+own_window_type override
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 20 20
+maximum_width 240
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color 656667
+default_shade_color 000000
+default_outline_color 828282
+default_bar_size 240 2
+alignment bottom_left
+gap_x 310
+gap_y 431
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+##########
+# Output #
+##########
+TEXT
+${color #FFFFFF}${font Tall Films:size=35}CPU: ${color #F23F44} ${CPU}%${font}
+${color #FFFFFF}${font Tall Films:size=35}${voffset 15}RAM: ${color #F23F44}${mem}${font}
+#${font Ostrich Sans:pixelsize=35}${voffset 15}UPDATES: ${execi 600 apt -Qu | wc -l}${font}
+${color #FFFFFF}${font Tall Films:size=35}${voffset 15}UPTIME: ${color #F23F44}${uptime}${font}
